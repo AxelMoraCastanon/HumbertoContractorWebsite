@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { SERVICES_TEXT } from "../constants";
 import BackyardFirePit from "../assets/Rennovations/BackyardFirePit.jpg";
 import BackyardLounge from "../assets/Rennovations/BackyardLounge.jpg";
 import DeckAndGrillArea from "../assets/Rennovations/DeckAndGrillArea.jpg";
@@ -14,22 +13,23 @@ import ModernRestroomSink from "../assets/Rennovations/ModernRestroomSink.jpg";
 import RestroomSinkRennovation from "../assets/Rennovations/RestroomSinkRennovation.jpg";
 import ModernGazebo from "../assets/Rennovations/ModernGazebo2.jpg";
 import ModernBilliardsRoom from "../assets/Rennovations/ModernBilliardsRoom.jpg";
+import ModernBackyard from "../assets/Rennovations/ModernBackyard.jpg";
 
 // Mapping of service titles to corresponding images
-const serviceImages = {
-  "Restroom Renovations": ModernRestroomSink,
-  "Kitchen Renovations": ModernKitchen,
-  "Front Yard Renovations": ModernFrontYard2,
-  "Backyard Renovations": BackyardLounge,
-  "BBQ Pits & Grilling Areas": GrillingArea,
-  "Pizza Ovens": DeckAndGrillArea,
-  "Fire Pits": BackyardFirePit,
-  "Decks & Patios": BackyardLounge,
-  "Pools": ModernPool,
-  "Complete Home Renovations": FrontYardRennovation,
-  "Custom Additions & Extensions": ModernBilliardsRoom,
-  "Gazebos": ModernGazebo,
-};
+const serviceImages = [
+  { title: "Complete Home Renovations", image: FrontYardRennovation },
+  { title: "Custom Additions & Extensions", image: ModernBilliardsRoom },
+  { title: "Restroom Renovations", image: ModernRestroomSink },
+  { title: "Kitchen Renovations", image: ModernKitchen },
+  { title: "Front Yard Renovations", image: ModernFrontYard2 },
+  { title: "Backyard Renovations", image: ModernBackyard },
+  { title: "BBQ Pits & Grilling Areas", image: GrillingArea },
+  { title: "Pizza Ovens", image: DeckAndGrillArea },
+  { title: "Fire Pits", image: BackyardFirePit },
+  { title: "Decks & Patios", image: BackyardLounge },
+  { title: "Pools", image: ModernPool },
+  { title: "Gazebos", image: ModernGazebo },
+];
 
 const Gallery = ({ fullPage }) => {
   return (
@@ -44,14 +44,14 @@ const Gallery = ({ fullPage }) => {
       </motion.h2>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {SERVICES_TEXT.map((service, index) => (
+        {serviceImages.map((service, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.05 }}
             className="relative rounded-lg shadow-lg overflow-hidden cursor-pointer"
           >
             <img
-              src={serviceImages[service.title]}
+              src={service.image}
               alt={service.title}
               className="w-full h-64 object-cover"
             />
