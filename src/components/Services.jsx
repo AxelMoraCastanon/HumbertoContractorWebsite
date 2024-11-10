@@ -14,12 +14,13 @@ import ModernRestroomSink from "../assets/Rennovations/ModernRestroomSink.jpg";
 import RestroomSinkRennovation from "../assets/Rennovations/RestroomSinkRennovation.jpg";
 import ModernGazebo from "../assets/Rennovations/ModernGazebo2.jpg";
 import ModernBilliardsRoom from "../assets/Rennovations/ModernBilliardsRoom.jpg";
+import ModernBackyard from "../assets/Rennovations/ModernBackyard.jpg";
 
 const serviceImages = {
   "Restroom Renovations": ModernRestroomSink,
   "Kitchen Renovations": ModernKitchen,
   "Front Yard Renovations": ModernFrontYard2,
-  "Backyard Renovations": BackyardLounge,
+  "Backyard Renovations": ModernBackyard,
   "BBQ Pits & Grilling Areas": GrillingArea,
   "Pizza Ovens": DeckAndGrillArea,
   "Fire Pits": BackyardFirePit,

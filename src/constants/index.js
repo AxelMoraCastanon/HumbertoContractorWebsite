@@ -6,6 +6,14 @@ we’re here to make it happen.`;
 
 export const SERVICES_TEXT = [
     {
+      title: "Complete Home Renovations",
+      description: "Whether you’re looking to revitalize a single room or remodel your entire home, we’re here to bring your vision to life with quality craftsmanship and a seamless process.",
+    },
+    {
+      title: "Custom Additions & Extensions",
+      description: "Expand your living space with custom additions and extensions. From extra rooms to sunrooms and beyond, we create cohesive, stylish additions that enhance your home.",
+    },
+    {
       title: "Restroom Renovations",
       description: "Upgrade your bathroom with modern fixtures, elegant tile work, and a sleek design tailored to your style and needs. We ensure every detail meets your standards for comfort and style.",
     },
@@ -44,14 +52,6 @@ export const SERVICES_TEXT = [
     {
       title: "Gazebos",
       description: "Create a shaded, stylish outdoor retreat with a custom-built gazebo. Perfect for relaxing, dining, or entertaining, our gazebos are designed to enhance your outdoor living space.",
-    },
-    {
-      title: "Complete Home Renovations",
-      description: "Whether you’re looking to revitalize a single room or remodel your entire home, we’re here to bring your vision to life with quality craftsmanship and a seamless process.",
-    },
-    {
-      title: "Custom Additions & Extensions",
-      description: "Expand your living space with custom additions and extensions. From extra rooms to sunrooms and beyond, we create cohesive, stylish additions that enhance your home.",
     },
   ];
     
