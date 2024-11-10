@@ -56,3 +56,13 @@ const App = () => {
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 p-3 rounded-full bg-transparent border border-white text-white shadow-lg hover:bg-white hover:text-black transition-colors duration-300"
             aria-label="Back to top"
+          >
+            <FaArrowUp />
+          </button>
+        )}
+      </div>
+    </Router>
+  );
+};
+
+export default App;
