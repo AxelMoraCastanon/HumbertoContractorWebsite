@@ -30,6 +30,10 @@ export const SERVICES_TEXT = [
       description: "Turn your backyard into an inviting outdoor oasis. We provide services for patios, decks, gardens, and more to create the perfect space for relaxation or entertaining.",
     },
     {
+      title: "Landscaping",
+      description: "Enhance your property with versatile landscaping options, tailored to your vision. Whether you prefer lush greenery, drought-tolerant desert plants, seasonal blooms, or custom hardscaping, we design and maintain landscapes that combine beauty and sustainability to perfectly complement your outdoor space.",
+    },
+    {
       title: "BBQ Pits & Grilling Areas",
       description: "Enhance your outdoor experience with custom BBQ pits, grilling areas, and outdoor islands. Perfect for hosting gatherings and creating memorable outdoor dining experiences.",
     },

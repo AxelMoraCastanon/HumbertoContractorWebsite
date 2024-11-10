@@ -15,6 +15,8 @@ import ModernGazebo from "../assets/Rennovations/ModernGazebo2.jpg";
 import ModernBilliardsRoom from "../assets/Rennovations/ModernBilliardsRoom.jpg";
 import ModernBackyard from "../assets/Rennovations/ModernBackyard.jpg";
 import AccessoryDwellingUnit2 from "../assets/Rennovations/AccessoryDwellingUnit2.jpg";
+import Landscaping from "../assets/Rennovations/Landscaping.jpg";
+
 
 // Mapping of service titles to corresponding images
 const serviceImages = [
@@ -24,6 +26,7 @@ const serviceImages = [
   { title: "Kitchen Renovations", image: ModernKitchen },
   { title: "Front Yard Renovations", image: ModernFrontYard2 },
   { title: "Backyard Renovations", image: ModernBackyard },
+  { title: "Landscaping", image: Landscaping },
   { title: "BBQ Pits & Grilling Areas", image: GrillingArea },
   { title: "Pizza Ovens", image: DeckAndGrillArea },
   { title: "Fire Pits", image: BackyardFirePit },
