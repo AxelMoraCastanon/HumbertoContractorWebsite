@@ -1,8 +1,13 @@
-export const ABOUT_TEXT = `At Vanguard Developments, we bring your vision to life with expert renovations tailored to every part of your home.
-Specializing in full renovations for restrooms, kitchens, front yards, backyards, and more,
-we’re dedicated to delivering quality craftsmanship and transformative results.
-Whether you’re looking to revitalize a single room or reimagine your entire space,
-we’re here to make it happen.`;
+export const ABOUT_TEXT = `At Vanguard Developments, we bring visions to life with expert craftsmanship, sustainable design, and seamless project management from concept to completion.
+Specializing in transformative renovations, we prioritize zero-carbon emissions, energy efficiency, and resilient construction to create spaces that enhance your lifestyle and protect your investment.`;
+
+export const ABOUT_TEXT_FULL = [
+  "At Vanguard Developments, we bring your vision to life with expert craftsmanship, timeless design, and forward-thinking solutions. From concept to completion, our team offers the expertise and foresight to guide every project through each stage—from cost estimates, development proposals, to full project management and construction delivery.",
+
+  "We specialize in transformative renovations, redefining spaces such as restrooms, kitchens, front yards, backyards, and beyond. With a focus on zero-carbon emissions, energy efficiency, and resilient construction designed to prevent natural disaster damage, we create spaces that are both sustainable and refined.",
+
+  "Whether you’re reimagining a single room or an entire home, Vanguard is dedicated to delivering lasting quality and thoughtful solutions that protect your investment and elevate your lifestyle."
+];
 
 export const SERVICES_TEXT = [
     {

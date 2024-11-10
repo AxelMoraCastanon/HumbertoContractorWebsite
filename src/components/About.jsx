@@ -1,5 +1,5 @@
 import ModernHome from "../assets/Rennovations/ModernHome.jpg";
-import { ABOUT_TEXT } from "../constants";
+import { ABOUT_TEXT, ABOUT_TEXT_FULL } from "../constants";
 import { motion } from "framer-motion";
 
 const About = ({ fullPage }) => {
@@ -14,10 +14,8 @@ const About = ({ fullPage }) => {
         color: "white",
       }}
     >
-      {/* Dark overlay to improve text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-      {/* Content Container */}
       <div className="relative flex flex-col items-center justify-center text-center px-4 z-10">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -28,14 +26,19 @@ const About = ({ fullPage }) => {
           About<span className="text-white"> Vanguard Developments</span>
         </motion.h1>
 
-        {/* Text Section with Smooth Transition */}
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="max-w-2xl bg-black bg-opacity-60 p-4 rounded-lg"
+          className="max-w-2xl bg-black bg-opacity-60 p-4 rounded-lg space-y-4"
         >
-          <p className="text-lg">{ABOUT_TEXT}</p>
+          {fullPage ? (
+            ABOUT_TEXT_FULL.map((paragraph, index) => (
+              <p key={index} className="text-lg">{paragraph}</p>
+            ))
+          ) : (
+            <p className="text-lg">{ABOUT_TEXT}</p>
+          )}
         </motion.div>
       </div>
     </div>
