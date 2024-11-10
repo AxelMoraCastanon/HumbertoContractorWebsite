@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import WebsiteBackground from "./assets/WebsiteBackground.jpg";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -40,7 +40,6 @@ const App = () => {
         <Navbar />
         <div className="container mx-auto px-8">
           <Routes>
-            {/* Redirect the root path to Home */}
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home fullPage />} />
             <Route path="/about" element={<About fullPage />} />
