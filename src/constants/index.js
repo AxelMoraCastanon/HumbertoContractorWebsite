@@ -84,7 +84,8 @@ export const SERVICES_TEXT = [
   
       
   export const CONTACT = {
-    email: "",
+    email: "Vanguarddevelopmentsinc@gmail.com",
+    instagram: "https://www.instagram.com/vanguarddevelopmentsinc/",
     phone: "",
     license: "",
   };

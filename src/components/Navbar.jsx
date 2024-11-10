@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/VanguardDevelopmentsLogo.jpg';
 import { MdQrCode } from 'react-icons/md';
+import { FaInstagram } from 'react-icons/fa'; // Import Instagram icon
 import { QRCodeCanvas } from 'qrcode.react';
 import { motion } from "framer-motion";
+import { CONTACT } from "../constants"; // Import CONTACT for Instagram link
 
 const Navbar = () => {
   const [showQR, setShowQR] = useState(false);
@@ -19,6 +21,11 @@ const Navbar = () => {
     },
   };
 
+  const iconHover = {
+    scale: 1.2,
+    transition: { type: 'spring', stiffness: 300 },
+  };
+
   return (
     <>
       <motion.nav
@@ -30,7 +37,7 @@ const Navbar = () => {
       >
         {/* Left section with navigation links */}
         <div className="flex gap-4 md:gap-8 text-sm md:text-lg mb-4 md:mb-0">
-          <Link to="/" className="hover:underline">Home</Link> {/* Added Home link */}
+          <Link to="/" className="hover:underline">Home</Link>
           <Link to="/about" className="hover:underline">About Us</Link>
           <Link to="/services" className="hover:underline">Services</Link>
           <Link to="/process" className="hover:underline">Process</Link>
@@ -43,14 +50,27 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Right section with Gallery, Contact Us, and QR button */}
+        {/* Right section with Gallery, Contact Us, Instagram, and QR button */}
         <div className="flex items-center gap-4 md:gap-6 text-sm md:text-lg">
           <Link to="/gallery" className="hover:underline">Gallery</Link>
           <Link to="/contact" className="hover:underline">Contact Us</Link>
+          
+          {/* Instagram Icon */}
+          <motion.a
+            href={CONTACT.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-pink-500"
+            whileHover={iconHover}
+          >
+            <FaInstagram size={24} />
+          </motion.a>
+
+          {/* QR Code Button */}
           <motion.button
             onClick={toggleQRModal}
             className="hover:text-green-500"
-            whileHover={{ scale: 1.2 }}
+            whileHover={iconHover}
           >
             <MdQrCode size={24} />
           </motion.button>

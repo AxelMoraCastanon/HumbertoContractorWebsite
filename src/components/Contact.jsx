@@ -67,6 +67,28 @@ const Contact = ({ fullPage }) => {
           </motion.div>
         )}
 
+        {/* Instagram Section */}
+        {CONTACT.instagram && (
+          <motion.div className="flex flex-col items-center" variants={itemVariants}>
+            <span className="font-semibold text-blue-300">Instagram: </span>
+            <motion.a
+              href={CONTACT.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-b relative overflow-hidden"
+              variants={hoverEffect}
+              whileHover="hover"
+            >
+              {CONTACT.instagram}
+              <motion.div
+                className="absolute bottom-0 left-0 h-0.5 bg-blue-300"
+                initial={{ width: 0 }}
+                animate={underlineEffect}
+              />
+            </motion.a>
+          </motion.div>
+        )}
+
         {/* Phone Number Section */}
         {CONTACT.phone && (
           <motion.div className="flex flex-col items-center" variants={itemVariants}>
