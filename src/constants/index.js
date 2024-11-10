@@ -10,8 +10,8 @@ export const SERVICES_TEXT = [
       description: "Whether you’re looking to revitalize a single room or remodel your entire home, we’re here to bring your vision to life with quality craftsmanship and a seamless process.",
     },
     {
-      title: "Custom Additions & Extensions",
-      description: "Expand your living space with custom additions and extensions. From extra rooms to sunrooms and beyond, we create cohesive, stylish additions that enhance your home.",
+      title: "Custom Additions, Extensions & ADUs",
+      description: "Expand your living space with custom additions, extensions, and accessory dwelling units (ADUs). Whether you’re looking for attached or detached ADUs, extra rooms, or sunrooms, we create cohesive, stylish spaces that enhance and elevate your home.",
     },
     {
       title: "Restroom Renovations",
