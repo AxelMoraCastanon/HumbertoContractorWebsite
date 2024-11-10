@@ -14,11 +14,12 @@ import RestroomSinkRennovation from "../assets/Rennovations/RestroomSinkRennovat
 import ModernGazebo from "../assets/Rennovations/ModernGazebo2.jpg";
 import ModernBilliardsRoom from "../assets/Rennovations/ModernBilliardsRoom.jpg";
 import ModernBackyard from "../assets/Rennovations/ModernBackyard.jpg";
+import AccessoryDwellingUnit2 from "../assets/Rennovations/AccessoryDwellingUnit2.jpg";
 
 // Mapping of service titles to corresponding images
 const serviceImages = [
   { title: "Complete Home Renovations", image: FrontYardRennovation },
-  { title: "Custom Additions & Extensions", image: ModernBilliardsRoom },
+  { title: "Custom Additions & Extensions", image: AccessoryDwellingUnit2 },
   { title: "Restroom Renovations", image: ModernRestroomSink },
   { title: "Kitchen Renovations", image: ModernKitchen },
   { title: "Front Yard Renovations", image: ModernFrontYard2 },

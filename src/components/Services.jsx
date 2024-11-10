@@ -15,8 +15,12 @@ import RestroomSinkRennovation from "../assets/Rennovations/RestroomSinkRennovat
 import ModernGazebo from "../assets/Rennovations/ModernGazebo2.jpg";
 import ModernBilliardsRoom from "../assets/Rennovations/ModernBilliardsRoom.jpg";
 import ModernBackyard from "../assets/Rennovations/ModernBackyard.jpg";
+import AccessoryDwellingUnit2 from "../assets/Rennovations/AccessoryDwellingUnit2.jpg";
+
 
 const serviceImages = {
+  "Complete Home Renovations": FrontYardRennovation,
+  "Custom Additions, Extensions & ADU's": AccessoryDwellingUnit2,
   "Restroom Renovations": ModernRestroomSink,
   "Kitchen Renovations": ModernKitchen,
   "Front Yard Renovations": ModernFrontYard2,
@@ -26,8 +30,6 @@ const serviceImages = {
   "Fire Pits": BackyardFirePit,
   "Decks & Patios": BackyardLounge,
   "Pools": ModernPool,
-  "Complete Home Renovations": FrontYardRennovation,
-  "Custom Additions & Extensions": ModernBilliardsRoom,
   "Gazebos": ModernGazebo,
 };
 
