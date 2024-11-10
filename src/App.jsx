@@ -27,10 +27,7 @@ const App = () => {
   };
 
   return (
-    <Router
-      basename="/HumbertoContractorWebsite"
-      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
-    >
+    <Router>
       <div
         className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900"
         style={{
