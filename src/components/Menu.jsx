@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaHome, FaInfoCircle, FaTools, FaClipboardList, FaImages, FaEnvelope, FaInstagram } from 'react-icons/fa';
 import { MdQrCode } from 'react-icons/md';
-import { QRCodeCanvas } from 'qrcode.react';
+// import { QRCodeCanvas } from 'qrcode.react'; // QR Code import commented out
 import { CONTACT } from "../constants";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showQR, setShowQR] = useState(false);
+  // const [showQR, setShowQR] = useState(false); // QR Code state commented out
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleQRModal = () => setShowQR(!showQR);
+  // const toggleQRModal = () => setShowQR(!showQR); // QR Code modal toggle commented out
 
   const handleClickOutside = (event) => {
     if (isOpen && !event.target.closest("#menuContainer") && !event.target.closest("#menuIcon")) {
@@ -25,7 +25,7 @@ const Menu = () => {
 
   return (
     <>
-      {/* Menu Icon */}
+      {/* Transparent Menu Icon */}
       <button
         onClick={toggleMenu}
         id="menuIcon"
@@ -35,11 +35,11 @@ const Menu = () => {
         <FaBars size={24} />
       </button>
 
-      {/* Scrollable Dropdown Menu */}
+      {/* Slide-in Scrollable Menu on the Right */}
       {isOpen && (
         <div
           id="menuContainer"
-          className="absolute top-20 right-5 bg-transparent p-4 rounded-lg shadow-lg z-40 w-56 max-h-80 overflow-y-auto"
+          className="fixed top-16 right-0 bg-transparent p-4 shadow-lg z-40 w-48 max-h-80 overflow-y-auto"
         >
           <nav className="flex flex-col items-end space-y-3">
             <Link
@@ -91,7 +91,7 @@ const Menu = () => {
               <span>Contact Us</span>
             </Link>
 
-            {/* Instagram Link */}
+            {/* Instagram Icon */}
             <a
               href={CONTACT.instagram}
               target="_blank"
@@ -102,20 +102,20 @@ const Menu = () => {
               <span>Instagram</span>
             </a>
 
-            {/* QR Code Button */}
-            <button
+            {/* QR Code Button - Commented Out */}
+            {/* <button
               onClick={toggleQRModal}
               className="flex items-center justify-end space-x-2 py-2 px-3 text-lg text-white bg-gray-800 bg-opacity-90 rounded-full shadow hover:bg-gray-700 transition-all"
             >
               <MdQrCode size={18} />
               <span>QR Code</span>
-            </button>
+            </button> */}
           </nav>
         </div>
       )}
 
-      {/* QR Code Modal */}
-      {showQR && (
+      {/* QR Code Modal - Commented Out */}
+      {/* {showQR && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center max-w-xs md:max-w-sm">
             <h3 className="text-lg font-bold mb-4">Scan to Share My Website</h3>
@@ -128,7 +128,7 @@ const Menu = () => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };
