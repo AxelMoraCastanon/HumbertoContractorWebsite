@@ -22,9 +22,17 @@ const About = ({ fullPage }) => {
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       </div>
 
-      {/* Inline image for mobile */}
-      <div className="sm:hidden w-full h-auto mb-8 flex flex-col items-center">
-        <img src={ModernHome} alt="Modern Home" className="w-full h-auto" />
+      {/* Full-screen background image for mobile, stretched and centered */}
+      <div
+        className="sm:hidden absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: `url(${ModernHome})`,
+          backgroundSize: "cover", // Stretches the image to cover entire mobile screen
+          backgroundPosition: "center", // Centers the image on mobile
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       </div>
 
       {/* Heading and Content */}
