@@ -38,15 +38,18 @@ const App = () => {
         }}
       >
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<div className="container mx-auto px-8"><Home /></div>} />
-          <Route path="/about" element={<About fullPage />} /> {/* Full-width About */}
-          <Route path="/services" element={<div className="container mx-auto px-8"><Services /></div>} />
-          <Route path="/process" element={<div className="container mx-auto px-8"><Process /></div>} />
-          <Route path="/gallery" element={<div className="container mx-auto px-8"><Gallery /></div>} />
-          <Route path="/contact" element={<div className="container mx-auto px-8"><Contact /></div>} />
-        </Routes>
+        {/* Wrap all routes in a single container for consistent full-page behavior */}
+        <div className="container mx-auto px-8">
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<Home fullPage />} />
+            <Route path="/about" element={<About fullPage />} />
+            <Route path="/services" element={<Services fullPage />} />
+            <Route path="/process" element={<Process fullPage />} />
+            <Route path="/gallery" element={<Gallery fullPage />} />
+            <Route path="/contact" element={<Contact fullPage />} />
+          </Routes>
+        </div>
 
         {showScroll && (
           <button
