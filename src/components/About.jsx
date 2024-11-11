@@ -1,5 +1,5 @@
 import ModernHome from "../assets/Rennovations/BlackModernHome.jpg";
-import { ABOUT_TEXT, ABOUT_TEXT_FULL } from "../constants";
+import { ABOUT_TEXT_FULL } from "../constants";
 import { motion } from "framer-motion";
 
 const About = ({ fullPage }) => {
@@ -44,13 +44,9 @@ const About = ({ fullPage }) => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="max-w-2xl p-4 space-y-4"
         >
-          {fullPage ? (
-            ABOUT_TEXT_FULL.map((paragraph, index) => (
-              <p key={index} className="text-lg">{paragraph}</p>
-            ))
-          ) : (
-            <p className="text-lg">{ABOUT_TEXT}</p>
-          )}
+          {ABOUT_TEXT_FULL.map((paragraph, index) => (
+            <p key={index} className="text-lg">{paragraph}</p>
+          ))}
         </motion.div>
       </div>
     </div>
