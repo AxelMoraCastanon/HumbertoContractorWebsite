@@ -3,8 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Vite + React</title>
+    <style>
+      /* Ensures full viewport coverage, no white areas */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+        background-color: black; /* fallback in case image doesn’t load */
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
