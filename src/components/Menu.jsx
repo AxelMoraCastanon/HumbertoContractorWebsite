@@ -3,19 +3,15 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaHome, FaInfoCircle, FaTools, FaClipboardList, FaImages, FaEnvelope, FaInstagram } from 'react-icons/fa';
 import { MdQrCode } from 'react-icons/md';
 import { QRCodeCanvas } from 'qrcode.react';
-import { CONTACT } from "../constants"; // Import CONTACT for Instagram link
+import { CONTACT } from "../constants";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showQR, setShowQR] = useState(false);
 
-  // Toggle the menu open or closed
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  // Toggle QR modal visibility
   const toggleQRModal = () => setShowQR(!showQR);
 
-  // Close the menu if the user clicks outside of it
   const handleClickOutside = (event) => {
     if (isOpen && !event.target.closest("#menuContainer") && !event.target.closest("#menuIcon")) {
       setIsOpen(false);
@@ -29,7 +25,7 @@ const Menu = () => {
 
   return (
     <>
-      {/* Transparent Menu Icon */}
+      {/* Menu Icon */}
       <button
         onClick={toggleMenu}
         id="menuIcon"
@@ -39,11 +35,11 @@ const Menu = () => {
         <FaBars size={24} />
       </button>
 
-      {/* Slide-in Menu on the Right */}
+      {/* Scrollable Dropdown Menu */}
       {isOpen && (
         <div
           id="menuContainer"
-          className="fixed top-16 right-0 bg-transparent p-4 shadow-lg z-40 w-48"
+          className="absolute top-20 right-5 bg-transparent p-4 rounded-lg shadow-lg z-40 w-56 max-h-80 overflow-y-auto"
         >
           <nav className="flex flex-col items-end space-y-3">
             <Link
@@ -95,7 +91,7 @@ const Menu = () => {
               <span>Contact Us</span>
             </Link>
 
-            {/* Instagram Icon */}
+            {/* Instagram Link */}
             <a
               href={CONTACT.instagram}
               target="_blank"
