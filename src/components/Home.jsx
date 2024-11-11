@@ -4,23 +4,27 @@ import Services from './Services';
 import Process from './Process';
 import Gallery from './Gallery';
 
-const Home = ({ fullPage }) => {
+const Home = () => {
   return (
-    <div className={`${fullPage ? 'min-h-screen' : ''} flex flex-col items-center justify-center`}>
-      {/* Main Home Page Content */}
-      <section id="about">
-        <About />
+    <>
+      {/* About Section, covering the full screen */}
+      <section id="about" className="w-screen relative left-1/2 -translate-x-1/2">
+        <About fullPage={true} />
       </section>
-      <section id="services">
-        <Services />
-      </section>
-      <section id="process">
-        <Process />
-      </section>
-      <section id="gallery">
-        <Gallery />
-      </section>
-    </div>
+
+      {/* Other sections within a flex container */}
+      <div className="flex flex-col items-center justify-center">
+        <section id="services">
+          <Services />
+        </section>
+        <section id="process">
+          <Process />
+        </section>
+        <section id="gallery">
+          <Gallery />
+        </section>
+      </div>
+    </>
   );
 };
 
